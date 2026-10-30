@@ -1,25 +1,29 @@
 <div align="center">
 
-![WorldLedger Toolkit](docs/assets/banner.svg)
+![WorldLedger — inspect the worlds behind a decision](docs/assets/banner.png)
 
-**Offline evaluation and auditable experiments for executable world models.**
+**Evaluate candidate worlds. Keep decisions and evidence together.**
 
 [![CI](https://github.com/LeriusLei/worldledger-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/LeriusLei/worldledger-toolkit/actions/workflows/ci.yml)
-[![Python](https://img.shields.io/badge/python-3.10%20%E2%80%93%203.12-3776AB)](pyproject.toml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-14B8A6.svg)](LICENSE)
-[![Offline](https://img.shields.io/badge/examples-offline-F59E0B)](examples/)
+[![Python](https://img.shields.io/badge/Python-3.10%20%E2%80%93%203.12-607D8B?logo=python&logoColor=white)](pyproject.toml)
+[![MIT](https://img.shields.io/badge/License-MIT-6E8B5B)](LICENSE)
+[![Runtime](https://img.shields.io/badge/Examples-CPU%20%2F%20offline-344B5E)](examples/)
 
-[English](README.md) · [简体中文](README.zh-CN.md) · [Quick start](#quick-start) · [Modules](#reusable-modules) · [Evidence boundaries](docs/EVIDENCE.md)
+[Documentation](docs/README.md) · [Get started](#get-started) · [Examples](docs/EXAMPLES.md) · [Modules](#building-blocks) · [简体中文](README.zh-CN.md)
 
 </div>
 
-WorldLedger Toolkit brings together the reusable engineering from a world-model research project: finite environments, exact regret evaluation, candidate committees, controlled counterfactual evaluation, and an append-only experiment ledger. Use it to ask **whether models disagree in ways that change a decision**, while keeping evaluator-only truth out of the online agent trace.
+WorldLedger is a Python toolkit for studying **how executable world models affect decisions**. It combines finite environments, exact regret evaluation, coherent candidate committees and an experiment audit ledger in three reusable packages.
 
-This is an **experimental toolkit with synthetic evaluation suites**. The release contains Python components and finite model specifications. Trained neural-network weights, a public model leaderboard, and a demonstrated general-purpose world-model method are outside its scope. The original project's negative and inconclusive research findings remain negative and inconclusive; see [what the evidence supports](docs/EVIDENCE.md).
+- **Inspect the candidate set.** Measure behavioral coverage, decision coverage and the risk introduced by omitted worlds.
+- **Separate online action from evaluation.** Record the executed branch and unlock evaluator-only truth after the episode is sealed.
+- **Keep the evidence attached.** Hash inputs, persist raw records before metrics, replay events and retain unresolved cost.
 
-## Quick start
+The included tasks are transparent synthetic controls. The library is experimental; [evidence and applicability](docs/EVIDENCE.md) are documented alongside the implementation.
 
-Python 3.10–3.12 is the CI target. A CPU is sufficient; the shipped examples need no API keys, model downloads, GPU, or provider account. Installing dependencies requires access to a Python package index unless they are already available locally.
+## Get started
+
+Python 3.10–3.12 · CPU · no model downloads or API keys for the examples.
 
 ```bash
 git clone https://github.com/LeriusLei/worldledger-toolkit.git
@@ -28,69 +32,83 @@ python -m venv .venv
 # Linux/macOS: source .venv/bin/activate
 # Windows PowerShell: .venv\Scripts\Activate.ps1
 python -m pip install -e ".[dev,plots]"
-python -m pytest -q
-```
-
-Run these commands from the repository root:
-
-```bash
 python examples/finite_worlds.py
-python examples/audit_ledger.py
-python experiments/run_sprinkler.py --seeds 400 --output-dir artifacts/sprinkler
-python experiments/run_hybrid_counterexample.py --output-dir artifacts/hybrid_counterexample
-python scripts/privacy_check.py
 ```
 
-The two examples print JSON. The experiments produce machine-readable summaries, CSV records and explanatory Markdown under the selected output directory. The Sprinkler runner also produces PNG plots when Matplotlib is installed. [See expected outputs and API examples →](docs/QUICKSTART.md)
+[Installation details, audit-ledger usage and installed-wheel notes →](docs/QUICKSTART.md)
 
-## Reusable modules
+## Same coverage. Different omission risk.
 
-| Module | What you can reuse | Starting point |
-|---|---|---|
-| Finite task families | Procedural Grid, Inventory and Queue worlds; factual histories and exact consistency sets | [`worldledger/benchmark`](worldledger/benchmark/) |
-| Exact evaluation | Behavior/decision equivalence, candidate omission, shared observation-contingent minimax policies | [`worldledger/evaluator`](worldledger/evaluator/), [`worldledger/world_model`](worldledger/world_model/) |
-| Decision components | Coherent candidate committees, action sets, hybrid-support diagnostics, ranking and episode-level statistics | [`sbcc`](sbcc/) |
-| Evaluator isolation | Deep-copied payloads, restored Python/NumPy RNG, post-episode truth sealing and paired-trace checks | [`information_firewall.py`](sbcc/information_firewall.py) |
-| Bounded source language | AST validation and interpretation of a small transition/observation/reward language | [`worldledger/sandbox`](worldledger/sandbox/), [`v04/runtime.py`](worldledger/v04/runtime.py) |
-| Experiment audit ledger | Immutable manifest identity, raw-before-derived records, hash-linked events and conservative unknown-cost accounting | [`research_audit`](research_audit/) |
-| Imagination utilities | NumPy lambda returns, coherent model rollouts and categorical CEM | [`imagined_rollouts.py`](sbcc/imagined_rollouts.py) |
+Two candidate pools can cover the same fraction of a model family while supporting different decisions. Here is a complete, offline example using two hand-selected pools from one registered Grid instance:
 
-The source interpreters and evaluator channel are research controls, not an OS security boundary. The audit ledger is single-writer, and its local hash chain is an integrity check rather than signed attestation. [Architecture and limitations →](docs/ARCHITECTURE.md)
+```python
+from worldledger.benchmark.generators.grid import generate_family_instance
+from worldledger.benchmark.history_generator import generate_histories
+from worldledger.evaluator.regret import evaluate_pool
 
-![Architecture and information boundary](docs/assets/architecture.svg)
+world = generate_family_instance(4)
+history = generate_histories(world, world.models[0])[0]
+pools = {"A": world.models[:2], "B": world.models[::2]}
 
-## Included experiments
-
-**Sprinkler decision ambiguity.** In a deliberately constructed finite setting, some probes identify nuisance detail while another identifies the action-relevant variable. The experiment compares MAP, BMA, robust choice, global information gain, random probing, decision-directed probing and an evaluator oracle. The figure below is generated from the shipped 400-seed run, not a real-world model benchmark.
-
-![Synthetic Sprinkler experiment](docs/assets/sprinkler_results.png)
-
-The [published summary](docs/demo_results/sprinkler_summary.json) records the exact configuration. Seeds follow a balanced factorial assignment, and observations are noiseless in this illustration. Treat this as a mechanism demonstration; the bars do not estimate performance across real tasks or independent learned models.
-
-**Component mixing counterexample.** Two coherent candidate worlds agree that the safe action is best. Crossing their transition and reward components creates combinations outside the original candidate set and an unsupported action ranking. Run the exact counterexample and inspect all four pairs. It establishes that this failure can occur under the constructed interface; it does not estimate its prevalence in other systems.
-
-**Finite-world accounting and audit ledger.** The examples show support shrinking after public observations, retain failed/empty candidate pools in evaluation, and replay a ledger in which unknown cost stays reserved. These are engineering demonstrations, not evidence of scientific success.
-
-## Why this release is a toolkit
-
-The project's useful outcome is a collection of independently reusable controls and evaluators. Its research branches used different contracts, and several failed their scientific or generation-reliability gates. A general benchmark or a small-model release would imply evidence or weights this repository does not provide. We therefore expose the working components, synthetic controls, limitations and provenance together. [Release choices and project map →](docs/PROJECT_MAP.md)
-
-## Repository guide
+for name, models in pools.items():
+    report = evaluate_pool(world, history, [m.model_id for m in models], horizon=1)
+    print(name, "coverage:", report["hcr"], "omission regret:", report["delta_omit"])
+```
 
 ```text
-worldledger/      finite worlds, exact evaluators, bounded source interpreters
-sbcc/             decision committees, trace controls, statistics, rollouts
-research_audit/   raw-first experiment ledger and identity checks
-examples/         small offline examples
-experiments/      reproducible synthetic experiments
-tests/            unit and integration checks for released components
-docs/             architecture, evidence boundaries, figures, source manifest
-scripts/          privacy and documentation checks
-.github/          CI and issue/pull-request templates
+A coverage: 0.5 omission regret: 0.0
+B coverage: 0.5 omission regret: 3.0
 ```
 
-## Contributing and citation
+Both pools are history-consistent. `delta_omit` measures the added worst-case regret of the retained pool's policy against the full consistent support. This is an exact one-step finite-family control; [interpretation and further cases](docs/EXAMPLES.md#coverage-and-decision-risk) stay tied to that setting.
 
-Start with [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) and [the module guide](docs/ARCHITECTURE.md). Cite this software using [CITATION.cff](CITATION.cff). Please preserve failed-run denominators, evaluator information boundaries and the distinction between synthetic controls and empirical results.
+## Building blocks
 
-Released under the [MIT License](LICENSE). The NumPy return implementation adapted from DreamerV3 retains its [upstream notice](licenses/DreamerV3-MIT.txt); other related projects are linked in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Private credentials, conversations, provider responses, model caches, manuscript drafts and the original Git history are excluded from this independent release.
+| Package | Reuse it for | Explore |
+|---|---|---|
+| **`worldledger`** | Finite tasks, exact support and regret, shared observation-contingent policies, bounded source interpretation | [Task families](worldledger/benchmark/) · [Evaluators](worldledger/evaluator/) · [Finite kernels](worldledger/world_model/) |
+| **`sbcc`** | Coherent committees, action sets, episode-level statistics, counterfactual trace controls and model-local rollouts | [Decision components](sbcc/) · [Information boundary](sbcc/information_firewall.py) |
+| **`research_audit`** | Input identity, raw-first records, hash-linked events, conservative cost accounting and replay | [Ledger API](research_audit/harness.py) · [Offline example](examples/audit_ledger.py) |
+
+### How the pieces connect
+
+![WorldLedger system map: public history, candidate decisions, sealed evaluation and the audit ledger](docs/assets/architecture.png)
+
+The online policy sees public observations. A trusted evaluator records counterfactual metrics; sealed results stay outside the online trace. The ledger records execution facts across the workflow. [Interfaces and operational limits →](docs/ARCHITECTURE.md)
+
+## Explore the controls
+
+| Question | Run from the repository root | What to inspect |
+|---|---|---|
+| How does factual history narrow model support? | `python examples/finite_worlds.py` | Grid, Inventory and Queue support: 4 → 2 → 1 |
+| Which information changes a decision? | `python experiments/run_sprinkler.py --seeds 400 --output-dir artifacts/sprinkler` | Utility, model entropy and decision classes |
+| What happens when candidate components are crossed? | `python experiments/run_hybrid_counterexample.py --output-dir artifacts/hybrid` | All four transition/reward pairs |
+| Can a record retain uncertainty and detect mutation? | `python examples/audit_ledger.py` | Actual file rehash, raw-first persistence and unknown cost |
+
+![Actual Sprinkler demo: utility and remaining decision ambiguity](docs/assets/sprinkler_results.png)
+
+The figure uses the [published 400-seed summary](docs/demo_results/sprinkler_summary.json), with balanced assignments, noiseless probes and cost 0.05. It illustrates a constructed mechanism. [See the full example gallery, component-mixing figure and scope of each control →](docs/EXAMPLES.md)
+
+## Reproducibility
+
+```bash
+python -m pytest -q
+python scripts/privacy_check.py
+python scripts/check_docs.py
+python scripts/create_figures.py
+```
+
+The [CI matrix](https://github.com/LeriusLei/worldledger-toolkit/actions/workflows/ci.yml) covers Linux and Windows on Python 3.10, 3.11 and 3.12, including examples, privacy checks and distribution builds. [Source hashes](docs/SOURCE_MANIFEST.json), [demo data](docs/demo_results/), [validation records](docs/VALIDATION.md) and [figure sources](scripts/create_visuals.py) make the release inspectable.
+
+## Go deeper
+
+| Start here | Continue with |
+|---|---|
+| [Documentation index](docs/README.md) | Installation, examples and module entry points |
+| [Architecture](docs/ARCHITECTURE.md) | Policy scope, evaluator isolation, AST language and ledger contract |
+| [Evidence boundaries](docs/EVIDENCE.md) | What the synthetic controls establish and what remains unproven |
+| [Project map](docs/PROJECT_MAP.md) | Release choices, historical branches and source provenance |
+
+Contributions are welcome through [issues](https://github.com/LeriusLei/worldledger-toolkit/issues) and pull requests. Read the [contribution guide](CONTRIBUTING.md), [community conduct](CODE_OF_CONDUCT.md) and [security policy](SECURITY.md). Cite the software with [CITATION.cff](CITATION.cff).
+
+**License:** [MIT](LICENSE), with [upstream notices](THIRD_PARTY_NOTICES.md) for adapted code and bundled fonts. This independent public tree excludes credentials, private conversations, raw provider responses, model caches and the original private Git history.

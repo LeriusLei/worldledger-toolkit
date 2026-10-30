@@ -1,6 +1,8 @@
 # Release validation
 
-Local validation for 0.1.0 on 2026-10-30 used Windows and Python 3.12.3. The Linux/Windows × Python 3.10/3.11/3.12 GitHub Actions matrix is configured separately; this local record does not claim those remote jobs have passed.
+Local validation for 0.1.0 on 2026-10-30 used Windows and Python 3.12.3. The [initial published commit's CI](https://github.com/LeriusLei/worldledger-toolkit/actions/runs/40999545744) passed all six Linux/Windows × Python 3.10/3.11/3.12 combinations, including installation, tests, examples, privacy checks, documentation checks and distribution builds. The live badge links to subsequent runs.
+
+The documentation refinement preserves the original scientific source files and published demo values. Its first-use Grid example is a hand-selected one-step control; both language versions are executed to verify their printed output. Figure values come from the saved Sprinkler summary and executable component-mixing control.
 
 | Check | Local result |
 |---|---|
