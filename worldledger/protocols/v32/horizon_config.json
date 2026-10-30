@@ -1,0 +1,15 @@
+{
+  "primary_horizon": 5,
+  "secondary_horizon": 1,
+  "optional_horizon": 10,
+  "discount_factor": 1.0,
+  "tie_tolerance": 1e-8,
+  "tie_handling": "first action in registered allowed_actions order",
+  "initial_belief": "instance initial_state_distribution; reset for counterfactual decision query",
+  "observation_update": "condition on jointly observed reward and observation after each action",
+  "policy_scope": "one nonanticipative observation-contingent policy shared by all candidate models",
+  "reward_accumulation": "undiscounted sum of per-step registered integer rewards",
+  "off_support_branch": "first registered action at every remaining step",
+  "planner": "minimize maximum model regret over candidate support against model-wise full-information optimum",
+  "horizon_10_status": "optional; do not claim validated until full exact control run"
+}

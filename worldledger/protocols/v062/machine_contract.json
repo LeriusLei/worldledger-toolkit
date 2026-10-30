@@ -1,0 +1,26 @@
+{
+  "contract_id": "drhc-v0.6.2-machine-maintenance-1",
+  "status": "frozen_for_offline_validation_only",
+  "no_api_authorization": true,
+  "states": ["healthy", "worn", "critical", "failed"],
+  "initial_state": "worn",
+  "actions": ["operate", "inspect", "service", "replace"],
+  "parameters": [
+    {"name": "fast_deterioration", "domain": [0, 1]},
+    {"name": "inspection_marker", "domain": [0, 1]}
+  ],
+  "assignment_count": 4,
+  "semantics": {
+    "operate_reward_by_state": {"healthy": 6, "worn": 4, "critical": -2, "failed": -12},
+    "operate_transition": "fast advances one state, slow stays; failed absorbs",
+    "inspect_reward": -2,
+    "inspect_transition": "stay",
+    "inspect_observation": "next state and inspection_marker",
+    "service_reward": -5,
+    "service_transition": "healthy",
+    "replace_reward": -6,
+    "replace_transition": "healthy",
+    "ordinary_observation": "next state",
+    "probability": "deterministic rational 1"
+  }
+}

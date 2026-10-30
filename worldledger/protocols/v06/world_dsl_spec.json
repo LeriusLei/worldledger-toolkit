@@ -1,0 +1,47 @@
+{
+  "dsl_id": "drhc-v06-grid-seed4-bounded-dsl-1",
+  "status": "offline_control_profile_not_llm_protocol",
+  "source_instance": "grid-00000004",
+  "normative_disclosure": "All fixed parameters and finite parameter domains in this document would have to be public to any future generator; they were not all public in v0.4.",
+  "state_space": {
+    "variables": [{"name": "x", "type": "integer", "domain": [0, 1, 2]}, {"name": "y", "type": "integer", "domain": [0, 1, 2, 3]}],
+    "constraints": {"excluded_positions": [[2, 0]], "initial_position": [1, 1], "all_nonwall_positions_are_legal": true}
+  },
+  "action_space": {
+    "legal_actions": ["east", "north", "west", "south", "wait", "probe_a", "probe_b"],
+    "action_constraints": "Actions are available from every legal state; movement into a boundary or wall stays in place."
+  },
+  "parameters": [
+    {"name": "mechanism_a", "domain": [0, 1], "role": "hidden gate bit"},
+    {"name": "mechanism_b", "domain": [0, 1], "role": "hidden gate bit"},
+    {"name": "move_reward", "domain": [-1, 0], "role": "unobserved non-gate move reward"}
+  ],
+  "transition_generator": {
+    "allowed_operators": ["deterministic", "conditional", "bounded_modification"],
+    "unsupported_operators": ["stochastic", "arbitrary_python", "unbounded_state_update"],
+    "movement_deltas": {"east": [1, 0], "north": [0, -1], "west": [-1, 0], "south": [0, 1]},
+    "gate_rules": [
+      {"at": [1, 1], "action": "east", "kind": "door", "bit": "mechanism_a", "closed_target": [1, 1]},
+      {"at": [1, 1], "action": "north", "kind": "door", "bit": "mechanism_b", "closed_target": [1, 1]}
+    ],
+    "wait_and_probe_preserve_state": true
+  },
+  "observation_generator": {
+    "observable_variables": ["next position", "probe sensor tag and bit on probe actions"],
+    "hidden_variables": ["mechanism_a", "mechanism_b"],
+    "mapping": "non-probe=('position',x,y); probe_a=('position',x,y,'sensor_a',mechanism_a XOR 1); probe_b=('position',x,y,'sensor_b',mechanism_b XOR 0)",
+    "sensor_masks": {"a": 1, "b": 0}
+  },
+  "reward_generator": {
+    "operators": ["integer_constant", "conditional_gate_bit", "bounded_parameter"],
+    "range": [-4, 11],
+    "blocked": -4,
+    "gate_a_open": 8,
+    "gate_b_open": 11,
+    "wait": -1,
+    "probe": -2,
+    "ordinary_move": "move_reward"
+  },
+  "semantics": "A parameter assignment denotes the total deterministic T/R/O function on every legal state and action. Rules are applied in order: probe, wait, blocked boundary/wall, gate, ordinary move. Initial observation is ('position',1,1).",
+  "max_assignments": 8
+}

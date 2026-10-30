@@ -1,0 +1,10 @@
+name: Feature request
+description: Propose a reusable evaluator or engineering improvement
+body:
+  - type: textarea
+    id: usecase
+    attributes:
+      label: Use case and proposed behavior
+      description: Explain the task this would enable and any evidence boundary it changes.
+    validations:
+      required: true

@@ -1,0 +1,52 @@
+{
+  "contract_id": "drhc-v0.6.1-seed4-bounded-gate-noise-1",
+  "status": "frozen_for_offline_validation_only",
+  "base_dsl_ref": "world_dsl_spec.json",
+  "base_dsl_sha256": "24c84904a62b99aac06eae779ac6864bcd1915528346b2de9ebf58d0df274fc3",
+  "scope": "Finite normative seed-4 Grid profile; not a completion of the open v0.4 prompt",
+  "state": {
+    "variables": [{"name": "x", "domain": [0, 1, 2]}, {"name": "y", "domain": [0, 1, 2, 3]}],
+    "excluded_positions": [[2, 0]],
+    "initial_state": [1, 1]
+  },
+  "actions": ["east", "north", "west", "south", "wait", "probe_a", "probe_b"],
+  "parameters": [
+    {"name": "mechanism_a", "domain": [0, 1]},
+    {"name": "mechanism_b", "domain": [0, 1]},
+    {"name": "move_reward", "domain": [-1, 0]},
+    {"name": "gate_flip_probability_numerator", "domain": [0, 1], "denominator": 2}
+  ],
+  "transition": {
+    "operators": ["deterministic", "conditional", "bounded_bernoulli_gate_flip"],
+    "stochastic_scope": "Only east/north gates from initial state; with probability p flip the corresponding mechanism bit for that step. All other transitions are deterministic.",
+    "stochastic_trigger": {"state": [1, 1], "actions": {"east": "mechanism_a", "north": "mechanism_b"}},
+    "outcome_probability_denominator": 2,
+    "maximum_outcomes_per_state_action": 2,
+    "movement_deltas": {"east": [1, 0], "north": [0, -1], "west": [-1, 0], "south": [0, 1]},
+    "wall_and_boundary_action": "stay",
+    "wait_and_probe_action": "stay"
+  },
+  "observation": {
+    "finite_alphabet": {"position_states": "all_legal_states", "tags": ["position", "sensor_a", "sensor_b"], "sensor_bits": [0, 1]},
+    "non_probe_mapping": ["position", "next_x", "next_y"],
+    "probe_a_mapping": ["position", "next_x", "next_y", "sensor_a", "mechanism_a XOR 1"],
+    "probe_b_mapping": ["position", "next_x", "next_y", "sensor_b", "mechanism_b XOR 0"],
+    "observable_state": ["x", "y"],
+    "hidden_state": ["mechanism_a", "mechanism_b"]
+  },
+  "reward": {
+    "finite_values": [-4, -2, -1, 0, 8, 11],
+    "range": [-4, 11],
+    "operators": ["constant", "conditional_gate_bit", "bounded_move_reward"],
+    "blocked": -4,
+    "probe": -2,
+    "wait": -1,
+    "gate_a_open": 8,
+    "gate_b_open": 11,
+    "ordinary_move_parameter": "move_reward"
+  },
+  "probability_semantics": "Exact rational probabilities; merge identical (next_state,reward,observation) outcomes before hashing; deterministic kernels use probability 1.",
+  "canonical_model_identity": "SHA-256 of ordered exact outcome distributions over all 11 legal states and 7 actions",
+  "assignment_count": 16,
+  "no_api_authorization": true
+}

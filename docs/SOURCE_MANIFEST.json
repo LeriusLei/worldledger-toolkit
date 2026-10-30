@@ -1,0 +1,593 @@
+{
+  "description": "Allowlisted extraction; hashes identify source bytes without disclosing private archive paths or history.",
+  "files": [
+    {
+      "source": "project/sbcc/__init__.py",
+      "release": "sbcc/__init__.py",
+      "source_sha256": "80cacdf503ae082555d36d7d42a340fafe34a59297f3543f5f0299096767cae2",
+      "release_sha256": "80cacdf503ae082555d36d7d42a340fafe34a59297f3543f5f0299096767cae2",
+      "modified": false
+    },
+    {
+      "source": "project/sbcc/sprinkler.py",
+      "release": "sbcc/sprinkler.py",
+      "source_sha256": "bb93a38485616b54cf7f0ff74fa998dbbc3f8500f8f8bd7aca1d4bdc0fc6547f",
+      "release_sha256": "bb93a38485616b54cf7f0ff74fa998dbbc3f8500f8f8bd7aca1d4bdc0fc6547f",
+      "modified": false
+    },
+    {
+      "source": "project/sbcc/agents.py",
+      "release": "sbcc/agents.py",
+      "source_sha256": "05567c580e81b89d0242bdaa36827f3fa75337d313bba91faab2bcab72a8bd81",
+      "release_sha256": "05567c580e81b89d0242bdaa36827f3fa75337d313bba91faab2bcab72a8bd81",
+      "modified": false
+    },
+    {
+      "source": "project/sbcc/candidate_noise_diagnostic.py",
+      "release": "sbcc/candidate_noise_diagnostic.py",
+      "source_sha256": "07a86db2a7a1d2a0bb0bb86cd7570a510781f5a64cf221a6a6d41656ff0be7c1",
+      "release_sha256": "07a86db2a7a1d2a0bb0bb86cd7570a510781f5a64cf221a6a6d41656ff0be7c1",
+      "modified": false
+    },
+    {
+      "source": "project/sbcc/candidate_ranking.py",
+      "release": "sbcc/candidate_ranking.py",
+      "source_sha256": "5fb7cc15383bd70cb5b9adc288eaeb3d88bb4e3eceaf5397d1950ff3ca764cd4",
+      "release_sha256": "5fb7cc15383bd70cb5b9adc288eaeb3d88bb4e3eceaf5397d1950ff3ca764cd4",
+      "modified": false
+    },
+    {
+      "source": "project/sbcc/closed_loop_artifact.py",
+      "release": "sbcc/closed_loop_artifact.py",
+      "source_sha256": "01ee6430da214c81387f1037c595dd21b24a2c30b3d01374756dea55b3a036cf",
+      "release_sha256": "01ee6430da214c81387f1037c595dd21b24a2c30b3d01374756dea55b3a036cf",
+      "modified": false
+    },
+    {
+      "source": "project/sbcc/closed_loop_policies.py",
+      "release": "sbcc/closed_loop_policies.py",
+      "source_sha256": "5ace773953d007b2aacf439c2f77a6d0bdd13645d0726ffdf112f03c56ff71d3",
+      "release_sha256": "5ace773953d007b2aacf439c2f77a6d0bdd13645d0726ffdf112f03c56ff71d3",
+      "modified": false
+    },
+    {
+      "source": "project/sbcc/closed_loop_runner.py",
+      "release": "sbcc/closed_loop_runner.py",
+      "source_sha256": "32026ffda68fcb7c5fc8f1cc4d2d05e748d978042e4de0ce952fca7f5a7890f6",
+      "release_sha256": "32026ffda68fcb7c5fc8f1cc4d2d05e748d978042e4de0ce952fca7f5a7890f6",
+      "modified": false
+    },
+    {
+      "source": "project/sbcc/conformal_action_set.py",
+      "release": "sbcc/conformal_action_set.py",
+      "source_sha256": "c4d51a1294af645fa7f7038354acb98fc1d5ea0d5225a8becce7c59f0ccbefbf",
+      "release_sha256": "c4d51a1294af645fa7f7038354acb98fc1d5ea0d5225a8becce7c59f0ccbefbf",
+      "modified": false
+    },
+    {
+      "source": "project/sbcc/decision_ensemble.py",
+      "release": "sbcc/decision_ensemble.py",
+      "source_sha256": "c4ecd9906c7ba7665bf5ed84b254ece720355a6fb89cc22f48efb09e233a4fdf",
+      "release_sha256": "c4ecd9906c7ba7665bf5ed84b254ece720355a6fb89cc22f48efb09e233a4fdf",
+      "modified": false
+    },
+    {
+      "source": "project/sbcc/fork_oracle.py",
+      "release": "sbcc/fork_oracle.py",
+      "source_sha256": "4705fe3e1b4e54e8fbd8e40ae49740823ac7fbb30f36c50381a0dade24b95456",
+      "release_sha256": "4705fe3e1b4e54e8fbd8e40ae49740823ac7fbb30f36c50381a0dade24b95456",
+      "modified": false
+    },
+    {
+      "source": "project/sbcc/hybrid_ensemble.py",
+      "release": "sbcc/hybrid_ensemble.py",
+      "source_sha256": "bdac8e060ef17ed991d2d33e06935f068234fe3a82bb682f474094111c5204e4",
+      "release_sha256": "bdac8e060ef17ed991d2d33e06935f068234fe3a82bb682f474094111c5204e4",
+      "modified": false
+    },
+    {
+      "source": "project/sbcc/hybrid_support.py",
+      "release": "sbcc/hybrid_support.py",
+      "source_sha256": "8df3bcc81af0dcc0fb0be38e7f7f271013979ac6d103472e9d16a2dc3f8fdbee",
+      "release_sha256": "8df3bcc81af0dcc0fb0be38e7f7f271013979ac6d103472e9d16a2dc3f8fdbee",
+      "modified": false
+    },
+    {
+      "source": "project/sbcc/imagined_rollouts.py",
+      "release": "sbcc/imagined_rollouts.py",
+      "source_sha256": "5804abed179acdcbb27a425d8502eee9d548d6ea01b7677776b7ef21112b9e37",
+      "release_sha256": "b27c578076c55500a6e8afc7a07b82fedd2e7df5008029b702bb2c6b1f190d51",
+      "modified": true
+    },
+    {
+      "source": "project/sbcc/information_firewall.py",
+      "release": "sbcc/information_firewall.py",
+      "source_sha256": "5b140878e42f514f267d71a8f2a34815120f14bea492a5621814d8be8352c2ff",
+      "release_sha256": "5b140878e42f514f267d71a8f2a34815120f14bea492a5621814d8be8352c2ff",
+      "modified": false
+    },
+    {
+      "source": "project/sbcc/refinement_audit.py",
+      "release": "sbcc/refinement_audit.py",
+      "source_sha256": "9d464764d959763b228b27392b378b57a53372fd6c80493ba0538b0fc15bc759",
+      "release_sha256": "9d464764d959763b228b27392b378b57a53372fd6c80493ba0538b0fc15bc759",
+      "modified": false
+    },
+    {
+      "source": "project/sbcc/statistical_analysis.py",
+      "release": "sbcc/statistical_analysis.py",
+      "source_sha256": "a1effc60153e74be13045b222ae90eda1a803b2c31b67743cde8e334a6358670",
+      "release_sha256": "a1effc60153e74be13045b222ae90eda1a803b2c31b67743cde8e334a6358670",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/__init__.py",
+      "release": "worldledger/__init__.py",
+      "source_sha256": "02819ce09383b924440a26f683d291c54080e0ec1326203947724bd47efbfc05",
+      "release_sha256": "02819ce09383b924440a26f683d291c54080e0ec1326203947724bd47efbfc05",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/benchmark/__init__.py",
+      "release": "worldledger/benchmark/__init__.py",
+      "source_sha256": "4ec907fb1529d6435b618372ad4e29b39aa383fec86030f2eda0627e8bc638ca",
+      "release_sha256": "4ec907fb1529d6435b618372ad4e29b39aa383fec86030f2eda0627e8bc638ca",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/benchmark/environments/__init__.py",
+      "release": "worldledger/benchmark/environments/__init__.py",
+      "source_sha256": "a8b428a591b3d051b6bb7cda2eb1fa61a3e1cb7255d23234c57e06dcef87df56",
+      "release_sha256": "a8b428a591b3d051b6bb7cda2eb1fa61a3e1cb7255d23234c57e06dcef87df56",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/benchmark/environments/grid.py",
+      "release": "worldledger/benchmark/environments/grid.py",
+      "source_sha256": "dfa9f241b6b16fdd737a28338b9eb6db024c0749a45ea3a7e995f4eaef153c45",
+      "release_sha256": "dfa9f241b6b16fdd737a28338b9eb6db024c0749a45ea3a7e995f4eaef153c45",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/benchmark/environments/inventory.py",
+      "release": "worldledger/benchmark/environments/inventory.py",
+      "source_sha256": "fc069e2d1cbd9006e5859376db9fe4760724e41b617d220fb8384937d5801e61",
+      "release_sha256": "fc069e2d1cbd9006e5859376db9fe4760724e41b617d220fb8384937d5801e61",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/benchmark/environments/queue_transfer.py",
+      "release": "worldledger/benchmark/environments/queue_transfer.py",
+      "source_sha256": "705816f7116e1f3f29a77164ce01e7c038e5794048a9b89952797f03bb94a7d4",
+      "release_sha256": "705816f7116e1f3f29a77164ce01e7c038e5794048a9b89952797f03bb94a7d4",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/benchmark/generators/__init__.py",
+      "release": "worldledger/benchmark/generators/__init__.py",
+      "source_sha256": "3dbc8b9f0849e4bebacf7904d04da41d6caf7c58085fefbd92a8e28d821cba84",
+      "release_sha256": "3dbc8b9f0849e4bebacf7904d04da41d6caf7c58085fefbd92a8e28d821cba84",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/benchmark/generators/grid.py",
+      "release": "worldledger/benchmark/generators/grid.py",
+      "source_sha256": "ebbd22ba44763e65d71ba7cca2cebb1a3631bdf2a90f33447c0e548c71218f24",
+      "release_sha256": "ebbd22ba44763e65d71ba7cca2cebb1a3631bdf2a90f33447c0e548c71218f24",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/benchmark/generators/inventory.py",
+      "release": "worldledger/benchmark/generators/inventory.py",
+      "source_sha256": "467887532fe1c5cee020c1198c1256ca4fcfaeacf2ec0e20ac198e64c677ef65",
+      "release_sha256": "467887532fe1c5cee020c1198c1256ca4fcfaeacf2ec0e20ac198e64c677ef65",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/benchmark/generators/queue_transfer.py",
+      "release": "worldledger/benchmark/generators/queue_transfer.py",
+      "source_sha256": "303e7e739c47986da148f85b3bb4369f01918f6267ea13413667ca2afad2d767",
+      "release_sha256": "303e7e739c47986da148f85b3bb4369f01918f6267ea13413667ca2afad2d767",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/benchmark/history_generator.py",
+      "release": "worldledger/benchmark/history_generator.py",
+      "source_sha256": "f55df0577cd0f7cf3c0fd988039bf3c583756932fd8667b5e1e5ccb2228d94c1",
+      "release_sha256": "f55df0577cd0f7cf3c0fd988039bf3c583756932fd8667b5e1e5ccb2228d94c1",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/benchmark/model_family.py",
+      "release": "worldledger/benchmark/model_family.py",
+      "source_sha256": "a96e154e9a5b0255dac707c4cc543479e1c0e651a3c7ad0970d190d6874238f4",
+      "release_sha256": "a96e154e9a5b0255dac707c4cc543479e1c0e651a3c7ad0970d190d6874238f4",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/evaluator/__init__.py",
+      "release": "worldledger/evaluator/__init__.py",
+      "source_sha256": "3699f1db83376f7b26c89ebdf803ca5fba179e06093a6e91a8da1b4a05cee26a",
+      "release_sha256": "3699f1db83376f7b26c89ebdf803ca5fba179e06093a6e91a8da1b4a05cee26a",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/evaluator/baselines/hypothesis_coverage_sampling.py",
+      "release": "worldledger/evaluator/baselines/hypothesis_coverage_sampling.py",
+      "source_sha256": "98e2a842b5cf62d15ba2476a4fd14cb2e46595361e8648e9c74eeefe0a998209",
+      "release_sha256": "98e2a842b5cf62d15ba2476a4fd14cb2e46595361e8648e9c74eeefe0a998209",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/evaluator/baselines/map_policy.py",
+      "release": "worldledger/evaluator/baselines/map_policy.py",
+      "source_sha256": "3a8bd43aeda8b790f3cf2aa1af88c85be118780aebebfeaaca13b58f8d9795fa",
+      "release_sha256": "3a8bd43aeda8b790f3cf2aa1af88c85be118780aebebfeaaca13b58f8d9795fa",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/evaluator/behavioral_quotient.py",
+      "release": "worldledger/evaluator/behavioral_quotient.py",
+      "source_sha256": "392868732cf81ca36da8be33953ee7a722233d07362788366263032f65fcf15a",
+      "release_sha256": "392868732cf81ca36da8be33953ee7a722233d07362788366263032f65fcf15a",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/evaluator/consistency.py",
+      "release": "worldledger/evaluator/consistency.py",
+      "source_sha256": "62c9716196956dc3caaae31bf1ae0b03ba1dcc7d5dfedc683422bc3136d04f44",
+      "release_sha256": "62c9716196956dc3caaae31bf1ae0b03ba1dcc7d5dfedc683422bc3136d04f44",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/evaluator/decision.py",
+      "release": "worldledger/evaluator/decision.py",
+      "source_sha256": "c7d8a65127ad3c08a77d017501848c3bcd29770ec0c561a553097e0fbbb83250",
+      "release_sha256": "c7d8a65127ad3c08a77d017501848c3bcd29770ec0c561a553097e0fbbb83250",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/evaluator/horizon.py",
+      "release": "worldledger/evaluator/horizon.py",
+      "source_sha256": "1b3be0e6de57eacf7c6855f9ed7cd26e8e54f2df6ea764f18a358939e7e8a9c0",
+      "release_sha256": "1b3be0e6de57eacf7c6855f9ed7cd26e8e54f2df6ea764f18a358939e7e8a9c0",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/evaluator/probe_domain.py",
+      "release": "worldledger/evaluator/probe_domain.py",
+      "source_sha256": "c2996d0ceac056e4e5a8397cf09c931ddabec24d1a412da0fd22e715db1b7875",
+      "release_sha256": "c2996d0ceac056e4e5a8397cf09c931ddabec24d1a412da0fd22e715db1b7875",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/evaluator/regret.py",
+      "release": "worldledger/evaluator/regret.py",
+      "source_sha256": "d1e6c853544340390657bf0ed16d3e4a3274dea48525159c573d4d0740f3c31f",
+      "release_sha256": "d1e6c853544340390657bf0ed16d3e4a3274dea48525159c573d4d0740f3c31f",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/evaluator/simulation.py",
+      "release": "worldledger/evaluator/simulation.py",
+      "source_sha256": "e569cdd6a717c04360ecd0f10cbd71577411ca192cc6affcfa5cfe61ada044eb",
+      "release_sha256": "e569cdd6a717c04360ecd0f10cbd71577411ca192cc6affcfa5cfe61ada044eb",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/evaluator/validation.py",
+      "release": "worldledger/evaluator/validation.py",
+      "source_sha256": "deb398a20595a722bd3847dbed66fd0314547824b4f3f1a44863d2d33801def8",
+      "release_sha256": "deb398a20595a722bd3847dbed66fd0314547824b4f3f1a44863d2d33801def8",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/sandbox/__init__.py",
+      "release": "worldledger/sandbox/__init__.py",
+      "source_sha256": "9df1e1c1d06a5ea21d970248354d90fedd366178eb79ebfc28ab7d52118b0fa3",
+      "release_sha256": "9df1e1c1d06a5ea21d970248354d90fedd366178eb79ebfc28ab7d52118b0fa3",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/sandbox/bridge.py",
+      "release": "worldledger/sandbox/bridge.py",
+      "source_sha256": "70370d8082e6694664090059f303190468c28f5961a9a7785cea97d59ecefcde",
+      "release_sha256": "70370d8082e6694664090059f303190468c28f5961a9a7785cea97d59ecefcde",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/sandbox/executor.py",
+      "release": "worldledger/sandbox/executor.py",
+      "source_sha256": "aa0d6725645b0490db12398625417faa97c74990af6f8a79992b619f2bf8ca77",
+      "release_sha256": "aa0d6725645b0490db12398625417faa97c74990af6f8a79992b619f2bf8ca77",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/sandbox/policy.py",
+      "release": "worldledger/sandbox/policy.py",
+      "source_sha256": "ffa27ea0e2c78232a6c2a7c778df2649f96324840594d55093b87b24495d26f7",
+      "release_sha256": "ffa27ea0e2c78232a6c2a7c778df2649f96324840594d55093b87b24495d26f7",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/sandbox/validator.py",
+      "release": "worldledger/sandbox/validator.py",
+      "source_sha256": "bf884650e6dae5127df233e7c81a1373ae0e12afac4784fe032d52742dc27d61",
+      "release_sha256": "bf884650e6dae5127df233e7c81a1373ae0e12afac4784fe032d52742dc27d61",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/world_model/__init__.py",
+      "release": "worldledger/world_model/__init__.py",
+      "source_sha256": "b7051c3c6aacad55b116f1006db62abf5b3fa5d9c8929011891e2275beced607",
+      "release_sha256": "b7051c3c6aacad55b116f1006db62abf5b3fa5d9c8929011891e2275beced607",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/world_model/canonical.py",
+      "release": "worldledger/world_model/canonical.py",
+      "source_sha256": "5673ebbeacc639717b83636a7f4f6d3e808f9e4cfcb00adf650f1808312272e1",
+      "release_sha256": "5673ebbeacc639717b83636a7f4f6d3e808f9e4cfcb00adf650f1808312272e1",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/world_model/enumerator.py",
+      "release": "worldledger/world_model/enumerator.py",
+      "source_sha256": "43b469676744337c900a349d164a4d0f85b6e614c247e4acf2fed0b2a80a43c5",
+      "release_sha256": "43b469676744337c900a349d164a4d0f85b6e614c247e4acf2fed0b2a80a43c5",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/world_model/machine.py",
+      "release": "worldledger/world_model/machine.py",
+      "source_sha256": "09c0c3150b685bf3672dbfaed468b5e4932d2a989c5e1b7978a2d2a6ad3d1d0a",
+      "release_sha256": "09c0c3150b685bf3672dbfaed468b5e4932d2a989c5e1b7978a2d2a6ad3d1d0a",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/world_model/multistep.py",
+      "release": "worldledger/world_model/multistep.py",
+      "source_sha256": "5336039cb799b8bd2034a592d9bf48b482e3a967e12ca6e6f67c84cb46e1f2da",
+      "release_sha256": "5336039cb799b8bd2034a592d9bf48b482e3a967e12ca6e6f67c84cb46e1f2da",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/world_model/regret.py",
+      "release": "worldledger/world_model/regret.py",
+      "source_sha256": "b45ae522e0f345d1512107c17c01c44f788bae11e607767b7c63bee3d01a1977",
+      "release_sha256": "b45ae522e0f345d1512107c17c01c44f788bae11e607767b7c63bee3d01a1977",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/world_model/validator.py",
+      "release": "worldledger/world_model/validator.py",
+      "source_sha256": "dd3d4fd64678965fb50584293f33c368927734368a4d4802c1b897724f0099b4",
+      "release_sha256": "dd3d4fd64678965fb50584293f33c368927734368a4d4802c1b897724f0099b4",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/v04/runtime.py",
+      "release": "worldledger/v04/runtime.py",
+      "source_sha256": "319d49219e99f5cd5928a5ace7736a254cd1aaf956f6464c439f8e69b8562592",
+      "release_sha256": "319d49219e99f5cd5928a5ace7736a254cd1aaf956f6464c439f8e69b8562592",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/v04/__init__.py",
+      "release": "worldledger/v04/__init__.py",
+      "source_sha256": "b32b0117441573089996edc5549f865a9a8df1caec568b3963fc0e5482212d5c",
+      "release_sha256": "b32b0117441573089996edc5549f865a9a8df1caec568b3963fc0e5482212d5c",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/pilot/mock_llm.py",
+      "release": "worldledger/fixtures/mock_candidates.py",
+      "source_sha256": "86a834c461244ec0da07bdb588d32290f1dd433edb5feb3f817769db200472cc",
+      "release_sha256": "86a834c461244ec0da07bdb588d32290f1dd433edb5feb3f817769db200472cc",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/protocols/v06/world_dsl_spec.json",
+      "release": "worldledger/protocols/v06/world_dsl_spec.json",
+      "source_sha256": "24c84904a62b99aac06eae779ac6864bcd1915528346b2de9ebf58d0df274fc3",
+      "release_sha256": "24c84904a62b99aac06eae779ac6864bcd1915528346b2de9ebf58d0df274fc3",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/protocols/v06/world_contract.json",
+      "release": "worldledger/protocols/v06/world_contract.json",
+      "source_sha256": "573a000696019145ba0df1ad80db56b300d66f66717cc33e4f3eee613e0b7477",
+      "release_sha256": "573a000696019145ba0df1ad80db56b300d66f66717cc33e4f3eee613e0b7477",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/protocols/v062/machine_contract.json",
+      "release": "worldledger/protocols/v062/machine_contract.json",
+      "source_sha256": "67e8dcfdae249f8297f70e021619bfbeddf8aeaeb0c5737119a1b6a48883b9c7",
+      "release_sha256": "67e8dcfdae249f8297f70e021619bfbeddf8aeaeb0c5737119a1b6a48883b9c7",
+      "modified": false
+    },
+    {
+      "source": "project/worldledger/protocols/v32/horizon_config.json",
+      "release": "worldledger/protocols/v32/horizon_config.json",
+      "source_sha256": "53f91ff0eb5b1bbaa1cc1dc1415ba77145d7042273d3a1ec912b75bad9e570a9",
+      "release_sha256": "53f91ff0eb5b1bbaa1cc1dc1415ba77145d7042273d3a1ec912b75bad9e570a9",
+      "modified": false
+    },
+    {
+      "source": "project/research_stopping/harness.py",
+      "release": "research_audit/harness.py",
+      "source_sha256": "2ae47bea67ebd2f71427ebd9b10e6963248557930ea535517ed3cb9fd0fd2e45",
+      "release_sha256": "2ae47bea67ebd2f71427ebd9b10e6963248557930ea535517ed3cb9fd0fd2e45",
+      "modified": false
+    },
+    {
+      "source": "project/research_stopping/__init__.py",
+      "release": "research_audit/__init__.py",
+      "source_sha256": "185a5ef7be37e677a007033a9c0b4aad4104132f124ad1694b9945798d79d3e5",
+      "release_sha256": "185a5ef7be37e677a007033a9c0b4aad4104132f124ad1694b9945798d79d3e5",
+      "modified": false
+    },
+    {
+      "source": "project/tests/test_sprinkler.py",
+      "release": "tests/test_sprinkler.py",
+      "source_sha256": "88fb98bbb24a1b84487cdd980ed3d8e48afdfd14d4b52739e0e0e8a11c8c1d9d",
+      "release_sha256": "88fb98bbb24a1b84487cdd980ed3d8e48afdfd14d4b52739e0e0e8a11c8c1d9d",
+      "modified": false
+    },
+    {
+      "source": "project/tests/test_hybrid_support.py",
+      "release": "tests/test_hybrid_support.py",
+      "source_sha256": "2426327f0fc483d71a47d72b52d7f0ca7f2066176371d1748680174abf2940ae",
+      "release_sha256": "2426327f0fc483d71a47d72b52d7f0ca7f2066176371d1748680174abf2940ae",
+      "modified": false
+    },
+    {
+      "source": "project/tests/test_hybrid_ensemble.py",
+      "release": "tests/test_hybrid_ensemble.py",
+      "source_sha256": "dc771d98549b57d522390f5cb6c6fd904a5567a9f071637b6e6147e03507d4d2",
+      "release_sha256": "dc771d98549b57d522390f5cb6c6fd904a5567a9f071637b6e6147e03507d4d2",
+      "modified": false
+    },
+    {
+      "source": "project/tests/test_decision_ensemble.py",
+      "release": "tests/test_decision_ensemble.py",
+      "source_sha256": "46cac73587ecc638b1440022100e6d1dc7b4c2eb3c437ddf1b1ef631d0138856",
+      "release_sha256": "46cac73587ecc638b1440022100e6d1dc7b4c2eb3c437ddf1b1ef631d0138856",
+      "modified": false
+    },
+    {
+      "source": "project/tests/test_conformal_action_set.py",
+      "release": "tests/test_conformal_action_set.py",
+      "source_sha256": "142a4c46cc7829b885271b4c2bbf55db096b99c6eab8941ab8b3ffd6a9e60f4a",
+      "release_sha256": "0922e3b6ac49381f927d324ce4b302a1583ae6a166130abdd8fc1a92864d483d",
+      "modified": true
+    },
+    {
+      "source": "project/tests/test_candidate_ranking.py",
+      "release": "tests/test_candidate_ranking.py",
+      "source_sha256": "d638e2b123db4a5b07624077cf854311ec69c90c8db25683cf8623e97ed2d23f",
+      "release_sha256": "d638e2b123db4a5b07624077cf854311ec69c90c8db25683cf8623e97ed2d23f",
+      "modified": false
+    },
+    {
+      "source": "project/tests/test_candidate_noise_diagnostic.py",
+      "release": "tests/test_candidate_noise_diagnostic.py",
+      "source_sha256": "1d60bf1bfe0ce3cd180b0bd3e091cf971871e4d79efa7189a9b2938d6eb0551b",
+      "release_sha256": "1d60bf1bfe0ce3cd180b0bd3e091cf971871e4d79efa7189a9b2938d6eb0551b",
+      "modified": false
+    },
+    {
+      "source": "project/tests/test_statistical_analysis.py",
+      "release": "tests/test_statistical_analysis.py",
+      "source_sha256": "9b83b8cb8bd8c8283db2d47d035711ed996601885bb659bf32b5514d97b95588",
+      "release_sha256": "9b83b8cb8bd8c8283db2d47d035711ed996601885bb659bf32b5514d97b95588",
+      "modified": false
+    },
+    {
+      "source": "project/tests/test_information_firewall.py",
+      "release": "tests/test_information_firewall.py",
+      "source_sha256": "6b39fbebc4d1aa561c13962c72382ceefd018df27b4054b547c7c6f949510819",
+      "release_sha256": "6b39fbebc4d1aa561c13962c72382ceefd018df27b4054b547c7c6f949510819",
+      "modified": false
+    },
+    {
+      "source": "project/tests/test_refinement_audit.py",
+      "release": "tests/test_refinement_audit.py",
+      "source_sha256": "a2ccfa7a084d238e1d02018773307fcd1ae0588ada4afdf94f5e71e3adad985d",
+      "release_sha256": "a2ccfa7a084d238e1d02018773307fcd1ae0588ada4afdf94f5e71e3adad985d",
+      "modified": false
+    },
+    {
+      "source": "project/tests/test_closed_loop_artifact.py",
+      "release": "tests/test_closed_loop_artifact.py",
+      "source_sha256": "a98afc2293ded890c56870e24d82ada5fce9743b796ce8c914a3e096b6402abb",
+      "release_sha256": "97bd99601d33664b61be82bd537e34515a094b4e836ebe52e06d81a102092d1e",
+      "modified": true
+    },
+    {
+      "source": "project/tests/test_closed_loop_runner.py",
+      "release": "tests/test_closed_loop_runner.py",
+      "source_sha256": "dc938de611f07d2783278485f8eefbc52cc3f0a14f9d6574390c9942a73d5b6c",
+      "release_sha256": "dc938de611f07d2783278485f8eefbc52cc3f0a14f9d6574390c9942a73d5b6c",
+      "modified": false
+    },
+    {
+      "source": "project/tests/test_closed_loop_policies.py",
+      "release": "tests/test_closed_loop_policies.py",
+      "source_sha256": "a7a5855d29ee090d264ab3388facb99ff0f87c27b6b55ffc0e8b60a9851cd19d",
+      "release_sha256": "a7a5855d29ee090d264ab3388facb99ff0f87c27b6b55ffc0e8b60a9851cd19d",
+      "modified": false
+    },
+    {
+      "source": "project/tests/test_drhc_sandbox.py",
+      "release": "tests/test_drhc_sandbox.py",
+      "source_sha256": "dba2f2d1ede914d71e10790c4eee3f8f1769b623eeb20d6d2cd9504be36afd8e",
+      "release_sha256": "dba2f2d1ede914d71e10790c4eee3f8f1769b623eeb20d6d2cd9504be36afd8e",
+      "modified": false
+    },
+    {
+      "source": "project/tests/test_drhc_bridge.py",
+      "release": "tests/test_drhc_bridge.py",
+      "source_sha256": "38b47bac2ce5e2f3ab9c3fd431816f592f2bc94f9a7eba060dfef1103f6e48ee",
+      "release_sha256": "38b47bac2ce5e2f3ab9c3fd431816f592f2bc94f9a7eba060dfef1103f6e48ee",
+      "modified": false
+    },
+    {
+      "source": "project/tests/test_drhc_horizon.py",
+      "release": "tests/test_drhc_horizon.py",
+      "source_sha256": "0f78494ab3bde11a6e3eabc20db88c37c6fab0188f07031848f18ab5923237bd",
+      "release_sha256": "0f78494ab3bde11a6e3eabc20db88c37c6fab0188f07031848f18ab5923237bd",
+      "modified": false
+    },
+    {
+      "source": "project/tests/test_drhc_map_baseline.py",
+      "release": "tests/test_drhc_map_baseline.py",
+      "source_sha256": "dd7c30febf05f2f0f10220aa7cffb36d0408149e26ef3510840cf41475add9eb",
+      "release_sha256": "dd7c30febf05f2f0f10220aa7cffb36d0408149e26ef3510840cf41475add9eb",
+      "modified": false
+    },
+    {
+      "source": "project/tests/test_drhc_hypothesis_sampling.py",
+      "release": "tests/test_drhc_hypothesis_sampling.py",
+      "source_sha256": "76464461736fc4b8ce8c17ffed53705de938082f42721b4c95450eea521d7311",
+      "release_sha256": "76464461736fc4b8ce8c17ffed53705de938082f42721b4c95450eea521d7311",
+      "modified": false
+    },
+    {
+      "source": "project/tests/test_imagined_rollouts.py",
+      "release": "tests/test_imagined_rollouts.py",
+      "source_sha256": "bbab0a8685e2742a6c30a1d81ca87ed738cd99e4c29add734cf205f68dfc5752",
+      "release_sha256": "d07d1075d9386382f8709efaec451e24278c45021f09c486195c363b5b7a82d6",
+      "modified": true
+    },
+    {
+      "source": "project/worldledger/world_model/test_v061_contract.py",
+      "release": "tests/test_finite_world_contract.py",
+      "source_sha256": "e896ae2d28e7854d59825daaf8dfbaa2d310f54176e07263f503ce400f4eab40",
+      "release_sha256": "8e9fce080509b3a3bf4aec82abd761f22a85c14cfa6bf93997d539ab5b343344",
+      "modified": true
+    },
+    {
+      "source": "project/experiments/run_sprinkler.py",
+      "release": "experiments/run_sprinkler.py",
+      "source_sha256": "f856b4ef252a27167aa7cadac8cf176e88f55fec2e2585c1d8884a183b23ac80",
+      "release_sha256": "9723103eb1b187b4c29721a4915bf6ab4f85e22e959650c38d8aead9c6cb185c",
+      "modified": true
+    },
+    {
+      "source": "project/experiments/run_hybrid_counterexample.py",
+      "release": "experiments/run_hybrid_counterexample.py",
+      "source_sha256": "e650f65f2e10d612f4969b0a86ae33b0c2563abd9ed5bcb725c51a489b495d3d",
+      "release_sha256": "e650f65f2e10d612f4969b0a86ae33b0c2563abd9ed5bcb725c51a489b495d3d",
+      "modified": false
+    },
+    {
+      "source": "project/external/dreamerv3-reference/LICENSE",
+      "release": "licenses/DreamerV3-MIT.txt",
+      "source_sha256": "9a0db563b71a42110ce6e52c066ec957ca908dd2fbff91e85df09d81a43076d2",
+      "release_sha256": "9a0db563b71a42110ce6e52c066ec957ca908dd2fbff91e85df09d81a43076d2",
+      "modified": false
+    }
+  ]
+}

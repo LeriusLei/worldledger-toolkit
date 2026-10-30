@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "worldledger-toolkit"
+version = "0.1.0"
+description = "Offline evaluation and auditable experiments for executable world models"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "LeriusLei"}]
+dependencies = ["numpy>=1.24,<3", "scipy>=1.10,<2"]
+keywords = ["world-models", "decision-making", "evaluation", "reproducibility", "research-audit"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "build>=1.2,<2"]
+plots = ["matplotlib>=3.7,<4"]
+
+[project.urls]
+Homepage = "https://github.com/LeriusLei/worldledger-toolkit"
+Issues = "https://github.com/LeriusLei/worldledger-toolkit/issues"
+
+[tool.setuptools]
+license-files = ["LICENSE", "licenses/*.txt", "THIRD_PARTY_NOTICES.md"]
+
+[tool.setuptools.packages.find]
+include = ["sbcc*", "worldledger*", "research_audit*"]
+namespaces = true
+
+[tool.setuptools.package-data]
+worldledger = ["protocols/v06/*.json", "protocols/v062/*.json", "protocols/v32/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

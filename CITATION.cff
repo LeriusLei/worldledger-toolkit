@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite this repository and the version or commit used."
+title: "WorldLedger Toolkit: Offline Evaluation and Auditable Experiments for Executable World Models"
+type: software
+authors:
+  - family-names: "LeriusLei"
+version: 0.1.0
+date-released: 2026-10-30
+url: "https://github.com/LeriusLei/worldledger-toolkit"
+repository-code: "https://github.com/LeriusLei/worldledger-toolkit"
+license: MIT

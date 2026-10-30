@@ -1,0 +1,30 @@
+name: CI
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ['3.10', '3.11', '3.12']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - run: python -m pip install -e ".[dev,plots]"
+      - run: python -m pytest -q
+      - run: python examples/finite_worlds.py
+      - run: python examples/audit_ledger.py
+      - run: python experiments/run_sprinkler.py --seeds 32 --output-dir artifacts/ci-sprinkler
+      - run: python experiments/run_hybrid_counterexample.py --output-dir artifacts/ci-hybrid
+      - run: python scripts/privacy_check.py
+      - run: python scripts/check_docs.py
+      - run: python -m build

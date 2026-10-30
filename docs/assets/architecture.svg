@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="731.52pt" height="349.92pt" viewBox="0 0 731.52 349.92" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>WorldLedger Toolkit</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M -0 349.92
+L 731.52 349.92
+L 731.52 0
+L -0 0
+z
+" style="fill: #f4f7fb"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 27.054 202.1256
+L 210.636 202.1256
+Q 217.332 202.1256 217.332 195.4728
+L 217.332 101.7792
+Q 217.332 95.1264 210.636 95.1264
+L 27.054 95.1264
+Q 20.358 95.1264 20.358 101.7792
+L 20.358 195.4728
+Q 20.358 202.1256 27.054 202.1256
+z
+" clip-path="url(#paa9b44b78d)" style="fill: #ffffff; stroke: #cfdae5; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 266.994 202.1256
+L 447.786 202.1256
+Q 454.482 202.1256 454.482 195.4728
+L 454.482 101.7792
+Q 454.482 95.1264 447.786 95.1264
+L 266.994 95.1264
+Q 260.298 95.1264 260.298 101.7792
+L 260.298 195.4728
+Q 260.298 202.1256 266.994 202.1256
+z
+" clip-path="url(#paa9b44b78d)" style="fill: #ffffff; stroke: #cfdae5; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 509.724 202.1256
+L 684.936 202.1256
+Q 691.632 202.1256 691.632 195.4728
+L 691.632 101.7792
+Q 691.632 95.1264 684.936 95.1264
+L 509.724 95.1264
+Q 503.028 95.1264 503.028 101.7792
+L 503.028 195.4728
+Q 503.028 202.1256 509.724 202.1256
+z
+" clip-path="url(#paa9b44b78d)" style="fill: #ffffff; stroke: #cfdae5; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 221.564544 147.24
+Q 237.977068 147.24 252.71254 147.24
+" clip-path="url(#paa9b44b78d)" style="fill: none; stroke: #60738a; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 247.11254 144.44
+L 252.71254 147.24
+L 247.11254 150.04
+z
+" clip-path="url(#paa9b44b78d)" style="fill: #60738a; stroke: #60738a; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 459.272034 147.24
+Q 478.197362 147.24 495.44564 147.24
+" clip-path="url(#paa9b44b78d)" style="fill: none; stroke: #60738a; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 489.84564 144.44
+L 495.44564 147.24
+L 489.84564 150.04
+z
+" clip-path="url(#paa9b44b78d)" style="fill: #60738a; stroke: #60738a; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 27.054 325.2024
+L 684.936 325.2024
+Q 691.632 325.2024 691.632 318.5496
+L 691.632 247.032
+Q 691.632 240.3792 684.936 240.3792
+L 27.054 240.3792
+Q 20.358 240.3792 20.358 247.032
+L 20.358 318.5496
+Q 20.358 325.2024 27.054 325.2024
+z
+" clip-path="url(#paa9b44b78d)" style="fill: #ffffff; stroke: #cfdae5; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 119.124 208.558048
+Q 119.124 222.080868 119.124 234.262047
+" clip-path="url(#paa9b44b78d)" style="fill: none; stroke: #8ba3b5; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 121.524 229.462047
+L 119.124 234.262047
+L 116.724 229.462047
+z
+" clip-path="url(#paa9b44b78d)" style="fill: #8ba3b5; stroke: #8ba3b5; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 354.6 208.558048
+Q 354.6 222.080868 354.6 234.262047
+" clip-path="url(#paa9b44b78d)" style="fill: none; stroke: #8ba3b5; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 357 229.462047
+L 354.6 234.262047
+L 352.2 229.462047
+z
+" clip-path="url(#paa9b44b78d)" style="fill: #8ba3b5; stroke: #8ba3b5; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 597.33 208.558048
+Q 597.33 222.080868 597.33 234.262047
+" clip-path="url(#paa9b44b78d)" style="fill: none; stroke: #8ba3b5; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 599.73 229.462047
+L 597.33 234.262047
+L 594.93 229.462047
+z
+" clip-path="url(#paa9b44b78d)" style="fill: #8ba3b5; stroke: #8ba3b5; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 33.75 114.5304
+L 66.114 114.5304
+" clip-path="url(#paa9b44b78d)" style="fill: none; stroke: #0ea5a3; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 273.69 114.5304
+L 306.054 114.5304
+" clip-path="url(#paa9b44b78d)" style="fill: none; stroke: #0ea5a3; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 516.42 114.5304
+L 548.784 114.5304
+" clip-path="url(#paa9b44b78d)" style="fill: none; stroke: #f4b942; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 482.382 213.768
+L 482.382 83.484
+" clip-path="url(#paa9b44b78d)" style="fill: none; stroke-dasharray: 6.8,6.8; stroke-dashoffset: 0; stroke: #f4b942; stroke-width: 1.7"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 33.75 259.7832
+L 66.114 259.7832
+" clip-path="url(#paa9b44b78d)" style="fill: none; stroke: #0ea5a3; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #172a42; font: 700 19px 'DejaVu Sans'; text-anchor: start" x="19.8" y="28.044" transform="rotate(-0 19.8 28.044)">A trace you can inspect. A boundary you can test.</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #60738a; font: 10.5px 'DejaVu Sans'; text-anchor: start" x="20.916" y="51.3288" transform="rotate(-0 20.916 51.3288)">Online decisions use public observations; counterfactual truth stays with the evaluator.</text>
+   </g>
+   <g id="text_3">
+    <text style="fill: #172a42; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="33.75" y="135.0432" transform="rotate(-0 33.75 135.0432)">FINITE WORLDS</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #60738a; font: 9.5px 'DejaVu Sans'" transform="translate(33.75 161.111316)">Grid / Inventory / Queue</text>
+    <text style="fill: #60738a; font: 9.5px 'DejaVu Sans'" transform="translate(33.75 174.99757)">Machine Maintenance</text>
+    <text style="fill: #60738a; font: 9.5px 'DejaVu Sans'" transform="translate(33.75 188.883823)">Explicit kernels and public histories</text>
+   </g>
+   <g id="text_5">
+    <text style="fill: #172a42; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="273.69" y="135.0432" transform="rotate(-0 273.69 135.0432)">CANDIDATE DECISIONS</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #60738a; font: 9.5px 'DejaVu Sans'" transform="translate(273.69 161.111316)">Coherent committees and action sets</text>
+    <text style="fill: #60738a; font: 9.5px 'DejaVu Sans'" transform="translate(273.69 174.99757)">Shared observation-contingent policies</text>
+    <text style="fill: #60738a; font: 9.5px 'DejaVu Sans'" transform="translate(273.69 188.883823)">Executed branch only</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #172a42; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="516.42" y="135.0432" transform="rotate(-0 516.42 135.0432)">SEALED EVALUATION</text>
+   </g>
+   <g id="text_8">
+    <text style="fill: #60738a; font: 9.5px 'DejaVu Sans'" transform="translate(516.42 161.111316)">Support, equivalence and regret</text>
+    <text style="fill: #60738a; font: 9.5px 'DejaVu Sans'" transform="translate(516.42 174.99757)">Trusted counterfactual fork</text>
+    <text style="fill: #60738a; font: 9.5px 'DejaVu Sans'" transform="translate(516.42 188.883823)">Post-episode truth access</text>
+   </g>
+   <g id="text_9">
+    <text style="fill: #60738a; font: 8.5px 'DejaVu Sans'; text-anchor: middle" x="237.978" y="132.2712" transform="rotate(-0 237.978 132.2712)">public</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #60738a; font: 8.5px 'DejaVu Sans'; text-anchor: middle" x="478.197" y="132.2712" transform="rotate(-0 478.197 132.2712)">seal</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #916b14; font: 8.5px 'DejaVu Sans'; text-anchor: middle" x="482.382" y="85.1472" transform="rotate(-0 482.382 85.1472)">information boundary</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #172a42; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="33.75" y="280.296" transform="rotate(-0 33.75 280.296)">RESEARCH AUDIT LEDGER</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #60738a; font: 9.5px 'DejaVu Sans'; text-anchor: start" x="33.75" y="306.364116" transform="rotate(-0 33.75 306.364116)">Input-file hashes  /  raw-before-derived records  /  linked events  /  unknown cost retained  /  replay</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #60738a; font: 8px 'DejaVu Sans'; text-anchor: start" x="28.728" y="338.508" transform="rotate(-0 28.728 338.508)">Research controls in one Python process; see the documented isolation and single-writer limits.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="paa9b44b78d">
+   <rect x="8.64" y="8.64" width="714.24" height="332.64"/>
+  </clipPath>
+ </defs>
+</svg>

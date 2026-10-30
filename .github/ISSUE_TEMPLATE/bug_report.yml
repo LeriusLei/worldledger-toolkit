@@ -1,0 +1,22 @@
+name: Bug report
+description: Report a reproducible problem in a released component
+body:
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal offline reproduction
+      description: Include the command and relevant input. Remove private data and credentials.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Version, Python and operating system
+    validations:
+      required: true

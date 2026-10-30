@@ -1,0 +1,10 @@
+{
+  "candidate_count": 2,
+  "component_combinations": 4,
+  "complete_candidates": 2,
+  "hybrid_fraction": 0.5,
+  "unsupported_ranking_count": 2,
+  "ranking_support_violation_rate": 0.5,
+  "unsupported_top_action_count": 2,
+  "unsupported_top_action_rate": 0.5
+}
